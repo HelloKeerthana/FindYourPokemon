@@ -2,7 +2,12 @@ async function fetchData() {
         const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
         const imgElement = document.getElementById("pokemonSprite");
         const loadingElement = document.getElementById("loading");
-      
+
+        if (!pokemonName) {
+        alert("Please enter a Pokémon name.");
+        return; // Stop execution if input is empty
+    }
+        
         loadingElement.style.display = "block";
         imgElement.style.display = "none";
 
